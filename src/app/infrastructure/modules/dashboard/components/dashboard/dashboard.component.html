@@ -1,0 +1,25 @@
+<div class="mt-8">
+  <h1 class="text-2xl font-bold">{{ tituloSistema }}</h1>
+  @if (loading$ | async) {
+    <p>{{ mensajeCarga }}</p>
+  }
+  <h2 class="text-xl font-bold text-gray-800 mb-4">Mensajes del Backend</h2>
+
+  <div class="bg-white rounded-lg shadow overflow-hidden">
+    @if (mensajes$ | async; as listaMensajes) {
+      <ul class="divide-y divide-gray-200">
+        @for (msg of listaMensajes; track msg.id) {
+          <li class="p-4 hover:bg-gray-50">
+            <div class="font-semibold text-blue-600">ID: {{ msg.id }}</div>
+            <div class="text-gray-700">{{ msg.contenido }}</div>
+            <div class="text-xs text-gray-400 mt-1">{{ msg.fecha }}</div>
+          </li>
+        } @empty {
+          <li class="p-4 text-gray-500">No hay mensajes para mostrar.</li>
+        }
+      </ul>
+    } @else {
+      <div class="p-4 text-center text-gray-500">Cargando datos...</div>
+    }
+  </div>
+</div>

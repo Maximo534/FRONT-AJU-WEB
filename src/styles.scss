@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/*Importar variables globales */
+@import './app/global.scss';
+
+/*Directivas de Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Tus estilos globales */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+/* Ejemplo de uso del Mixin global */
+.card-judicial {
+  @include card-shadow; // Usando el mixin definido en global.scss
+  padding: $padding-base;
+}

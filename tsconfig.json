@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -19,10 +20,16 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+    "paths": {
+      "@domain/*": ["src/app/domain/*"],
+      "@use-cases/*": ["src/app/use-cases/*"],
+      "@infrastructure/*": ["src/app/infrastructure/*"],
+      "@shared/*": ["src/app/infrastructure/shared/*"],
+      "@ui/*": ["src/app/infrastructure/shared/components/*"],
+      "@env/*": ["src/environments/*"],
+      "@constants": ["./src/app/constants"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

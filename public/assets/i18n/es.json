@@ -1,0 +1,16 @@
+{
+  "APP": {
+    "TITULO": "Sistema de Gestión de Expedientes",
+    "PIE_PAGINA": "© 2025 Poder Judicial del Perú. Todos los derechos reservados."
+  },
+  "MENU": {
+    "INICIO": "Inicio",
+    "EXPEDIENTES": "Expedientes",
+    "CONFIGURACION": "Configuración"
+  },
+  "BOTONES": {
+    "GUARDAR": "Guardar",
+    "CANCELAR": "Cancelar",
+    "BUSCAR": "Buscar"
+  }
+}

@@ -1,0 +1,13 @@
+<div class="flex h-screen flex-col">
+  <app-navbar (menuToggle)="drawer.toggle()"></app-navbar>
+
+  <mat-drawer-container class="flex-auto" autosize>
+    <mat-drawer #drawer mode="side" opened="true" class="w-64 border-r">
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+
+    <mat-drawer-content class="p-6 bg-gray-50">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
